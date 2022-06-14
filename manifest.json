@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "scribd",
+    "version": "0.1",
+    "description": "Chrome extension for Scribd Document pages revealing without subscribing.",
+    "background": {
+        "scripts": ["background.js"]
+      },
+    "content_scripts": [
+        {
+          "matches": [
+            "https://*.scribd.com/*",
+            "http://*.scribd.com/*"
+          ],
+          "js": ["content.js"]
+        }
+      ],
+    "browser_action": {
+        "default_icon": "slog.png"
+    }
+    
+  }
